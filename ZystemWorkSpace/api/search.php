@@ -1,0 +1,3 @@
+<?php
+declare(strict_types=1);$config=require __DIR__.'/../config/config.php';require_once __DIR__.'/../app/Database.php';require_once __DIR__.'/../app/Auth.php';require_once __DIR__.'/../app/UserStorage.php';require_once __DIR__.'/../app/WorkspaceService.php';require_once __DIR__.'/../app/SearchService.php';try{$u=(new Auth($config))->requireUser();$base=UserStorage::home($config,(int)$u['id']);$ws=new WorkspaceService(['workspace'=>$base]);$in=$_SERVER['REQUEST_METHOD']==='GET'?$_GET:request_json();json_response((new SearchService($ws,$config))->search($in));}catch(Throwable $e){json_response(['ok'=>false,'error'=>$e->getMessage()],400);}
+?>

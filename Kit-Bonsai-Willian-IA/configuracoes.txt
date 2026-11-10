@@ -1,0 +1,23 @@
+# BONSAI - EDITE SOMENTE ESTE ARQUIVO E SALVE COM CTRL+S
+# Nao cole nada no PowerShell. Depois, abra o inicializador do seu sistema.
+# Escreva somente o valor depois de =, sem aspas nem comentario na mesma linha.
+
+# 1. ACESSO: chat = conversar; arquivos = ler/editar; total = inclui terminal.
+# arquivos e total NAO isolam o acesso a pasta: usam as permissoes da sua conta.
+MODO=chat
+
+# 2. CONTEXTO: comece com 4096. Depois teste 16384, 32768 ou 65536.
+# Use numero inteiro SEM pontos. Limite do modelo: 262144, sujeito a memoria.
+CONTEXTO=4096
+
+# 3. GPU: 99 tenta carregar todas as camadas; 0 usa CPU; 20 e uso parcial.
+# Para CPU sem placa compativel, baixe tambem o pacote CPU do programa.
+CAMADAS_GPU=99
+
+# 4. PROJETO: escolha a pasta no chat, em "Set working directory".
+# Selecione a pasta em cada conversa nova. Mantenha a linha abaixo como esta.
+PROJETO=.
+
+# 5. PORTA: mantenha 8080; se ocupada, tente 8081.
+# Abra http://127.0.0.1:8080 ou a porta que voce escolheu.
+PORTA=8080

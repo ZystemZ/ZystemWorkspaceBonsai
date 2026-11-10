@@ -1,0 +1,66 @@
+BONSAI - EDITE, SALVE E ABRA
+==========================
+
+1. EXTRAIA o ZIP. Nao execute arquivos dentro do ZIP.
+2. Coloque TODOS os arquivos do kit junto do llama-server e dos dois GGUF.
+   No Windows, o programa e llama-server.exe. Mac/Linux usam llama-server.
+   Use o pacote da PrismML correto para seu sistema e placa, com suas DLLs
+   ou bibliotecas. Este kit NAO baixa modelos nem instala dependencias.
+3. Abra configuracoes.txt no Bloco de Notas (Mac: editor de texto simples).
+   Altere so os valores depois do sinal =. Salve. Nao renomeie o arquivo.
+4. Inicie conforme seu sistema abaixo. Aguarde o modelo carregar.
+5. Abra http://127.0.0.1:8080 no navegador. Se mudar PORTA, ajuste o endereco.
+
+WINDOWS - DOIS CLIQUES
+---------------------
+Abra Iniciar-Windows.bat. Nao abra nem edite motor-windows.ps1.
+Nao precisa copiar comandos nem instalar PowerShell 7, Python ou Node.
+A politica Bypass vale apenas para esse processo, sem alteracao permanente.
+Computadores gerenciados por empresas podem bloquear scripts.
+
+MAC - PRIMEIRA VEZ
+-----------------
+Abra o Terminal dentro da pasta do programa e execute:
+chmod +x Iniciar-Mac.command Iniciar-Linux-Mac.sh llama-server
+Depois, abra Iniciar-Mac.command com dois cliques.
+Se o macOS bloquear, confira a origem e as orientacoes de seguranca do sistema;
+nao desative o Gatekeeper globalmente. Alternativa no Terminal da pasta:
+bash Iniciar-Linux-Mac.sh
+
+LINUX
+-----
+Abra um terminal dentro da pasta do programa e execute:
+bash Iniciar-Linux-Mac.sh
+Se necessario, conceda permissao ao executavel uma vez:
+chmod +x llama-server
+Duplo clique depende do gerenciador de arquivos; o terminal e o caminho padrao.
+
+PARA ALTERAR DEPOIS
+------------------
+Pare o servidor com Ctrl+C no terminal. Edite configuracoes.txt, salve e inicie
+novamente. Fechar apenas a aba do navegador NAO encerra o servidor.
+
+AJUSTES RAPIDOS
+--------------
+MODO=chat       : conversar sem habilitar ferramentas locais.
+MODO=arquivos   : ler, buscar, criar e editar arquivos; sem terminal.
+MODO=total      : todas as ferramentas internas, inclusive terminal.
+PROJETO=.      : usar a pasta do programa. Ou cole outro caminho existente.
+CONTEXTO=4096  : primeiro teste. Depois teste 16384, 32768 e 65536.
+CAMADAS_GPU=99 : GPU. Use 0 com pacote CPU, ou 20 para offload parcial.
+PORTA=8080     : troque por 8081 se ocupada e use a nova porta no navegador.
+
+IMPORTANTE
+----------
+- Escreva caminhos SEM aspas, SEM $env:, SEM ~. Espacos e acentos sao aceitos.
+- Contexto e numero inteiro SEM pontos. 1004096 excede o limite 262144.
+  O limite do modelo NAO significa que seu PC tenha memoria para ele.
+- Total nao da privilegios de administrador. Arquivos e total podem acessar
+  caminhos FORA do projeto conforme permissoes da conta; nao sao uma sandbox.
+  Use copia de teste. Esses modos nao garantem ausencia de recusas do modelo.
+- Ferramentas sao experimentais. Se houver seletor no chat, ative as desejadas.
+- Se falhar, a janela explica o campo ou arquivo a corrigir. Salve e reabra.
+  Nenhum inicializador garante compatibilidade com toda GPU ou falta de RAM.
+- O kit nao contem o programa, modelo, adaptador ou dependencias.
+
+Willian IA | Curso: https://www.williandesigner.com/seja-seu-chefe
